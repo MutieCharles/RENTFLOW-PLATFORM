@@ -1,0 +1,25 @@
+{
+  "name": "rentroll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+  "start": "node dist/server/index.js",
+  "dev": "ts-node server/index.ts",
+  "build": "tsc",
+  "seed:rooms": "ts-node server/db/seedRooms.ts"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.4.0",
+    "@types/pg": "^8.15.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}

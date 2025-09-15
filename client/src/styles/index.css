@@ -1,0 +1,66 @@
+/*index.css (minimal Tailwind-like setup)
+
+If you’re not using Tailwind yet, add quick CSS in client/src/styles/index.css:*/
+
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f9fafb;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.text-white {
+  color: white;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.shadow {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-green-500 {
+  background-color: #22c55e;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+.bg-red-500 {
+  background-color: #ef4444;
+}
+
+.mb-4 {
+  margin-block-end: 1rem;
+}
+
+.mb-6 {
+  margin-block-end: 1.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
