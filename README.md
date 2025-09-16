@@ -78,16 +78,59 @@ A Node.js platform for managing rental processes, seed data, and more, built wit
 ```
 .
 ├── server/
-│   ├── index.ts           # Entry point for the server
-│   ├── db/
-│   │   ├── seedRooms.ts   # Seeds rooms into the database
-│   │   └── seedAll.ts     # Seeds all data
-│   └── ...                # Other server files/modules
-├── dist/                  # Compiled JS output
+│   ├── index.ts                  # Entry point (server bootstrap)
+│   ├── app.ts                    # Express app configuration
+│   │
+│   ├── config/                   # Configuration (DB, env, etc.)
+│   │   ├── db.ts                 # Database connection (Postgres or Mongo)
+│   │   └── env.ts                # Load and validate environment variables
+│   │
+│   ├── routes/                   # Route definitions
+│   │   ├── auth.routes.ts
+│   │   ├── tenant.routes.ts
+│   │   ├── room.routes.ts
+│   │   └── index.ts              # Combines all routes
+│   │
+│   ├── controllers/              # Handle requests/responses
+│   │   ├── auth.controller.ts
+│   │   ├── tenant.controller.ts
+│   │   └── room.controller.ts
+│   │
+│   ├── services/                 # Business logic (independent of Express)
+│   │   ├── auth.service.ts
+│   │   ├── tenant.service.ts
+│   │   └── room.service.ts
+│   │
+│   ├── models/                   # Database models / schemas
+│   │   ├── tenant.model.ts
+│   │   ├── room.model.ts
+│   │   └── index.ts
+│   │
+│   ├── middleware/               # Express middleware
+│   │   ├── auth.middleware.ts    # JWT or session validation
+│   │   ├── error.middleware.ts   # Centralized error handling
+│   │   └── validate.middleware.ts # (Optional) for request validation
+│   │
+│   ├── utils/                    # Helpers/utilities
+│   │   ├── logger.ts             # Winston or pino logger
+│   │   └── response.ts           # Standardized API responses
+│   │
+│   ├── db/                       # Database seeders/migrations
+│   │   ├── seedRooms.ts
+│   │   ├── seedTenants.ts
+│   │   └── seedAll.ts
+│   │
+│   └── types/                    # Global TypeScript types/interfaces
+│       ├── express.d.ts
+│       └── index.d.ts
+│
+├── dist/                         # Compiled JS output
+│
 ├── package.json
 ├── tsconfig.json
-├── .env                   # Environment variables
+├── .env                          # Environment variables
 └── README.md
+
 ```
 
 ## Environment Variables
