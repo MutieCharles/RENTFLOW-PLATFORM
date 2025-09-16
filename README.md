@@ -37,7 +37,6 @@ A Node.js platform for managing rental processes, seed data, and more, built wit
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/MutieCharles/RENTFLOW-PLATFORM.git
-    cd RENTFLOW-PLATFORM
     ```
 
 2. **Install dependencies:**
